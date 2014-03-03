@@ -4,7 +4,7 @@
 
 include $(GOROOT)/src/Make.inc
 
-TARG=github.com/banthar/Go-SDL/ttf
+TARG=github.com/adkennan/Go-SDL/ttf
 
 GOFILES:=constants.go
 CGOFILES:=ttf.go

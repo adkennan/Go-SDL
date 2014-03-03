@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/banthar/Go-SDL/mixer"
-	"github.com/banthar/Go-SDL/sdl"
-	"github.com/banthar/Go-SDL/ttf"
+	"github.com/adkennan/Go-SDL/mixer"
+	"github.com/adkennan/Go-SDL/sdl"
+	"github.com/adkennan/Go-SDL/ttf"
 	"math"
 )
 

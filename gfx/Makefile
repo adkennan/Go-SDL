@@ -4,7 +4,7 @@
 
 include $(GOROOT)/src/Make.inc
 
-TARG=github.com/banthar/Go-SDL/gfx
+TARG=github.com/adkennan/Go-SDL/gfx
 
 GOFILES:=constants.go\
 	framerate.go
