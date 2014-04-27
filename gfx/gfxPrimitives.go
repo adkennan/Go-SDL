@@ -143,6 +143,16 @@ func RoundedBoxRGBA(dst *sdl.Surface, x1, y1, x2, y2, rad int16, r, g, b, a uint
 //int lineColor (SDL_Surface *dst, Sint16 x1, Sint16 y1, Sint16 x2, Sint16 y2, Uint32 color)
 // Draw line with alpha blending.
 //
+func LineColor(dst *sdl.Surface, x1, y1, x2, y2 int16, color uint32) int {
+	return int(
+		C.lineColor((*C.SDL_Surface)(cast(dst)),
+			C.Sint16(x1),
+			C.Sint16(y1),
+			C.Sint16(x2),
+			C.Sint16(y2),
+			C.Uint32(color)))
+}
+
 //int lineRGBA (SDL_Surface *dst, Sint16 x1, Sint16 y1, Sint16 x2, Sint16 y2, Uint8 r, Uint8 g, Uint8 b, Uint8 a)
 // Draw line with alpha blending.
 //

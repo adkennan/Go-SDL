@@ -11,7 +11,7 @@ package ttf
 // #cgo LDFLAGS: -lSDL_ttf
 // #include "SDL_ttf.h"
 import "C"
-import "github.com/banthar/Go-SDL/sdl"
+import "github.com/adkennan/Go-SDL/sdl"
 import "unsafe"
 
 // A ttf or otf font.

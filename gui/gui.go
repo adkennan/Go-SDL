@@ -3,7 +3,7 @@ package sdlgui
 import (
 	"errors"
 	"exp/gui"
-	"github.com/banthar/Go-SDL/sdl"
+	"github.com/adkennan/Go-SDL/sdl"
 	"image"
 	"image/draw"
 	"runtime"
