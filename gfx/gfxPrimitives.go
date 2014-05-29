@@ -268,6 +268,18 @@ func FilledEllipseRGBA(dst *sdl.Surface, x, y, rx, ry int16, r, g, b, a uint8) i
 //
 //int filledTrigonColor (SDL_Surface *dst, Sint16 x1, Sint16 y1, Sint16 x2, Sint16 y2, Sint16 x3, Sint16 y3, Uint32 color)
 // Draw filled trigon (triangle) with alpha blending.
+func FilledTrigonColor(dst *sdl.Surface, x1, y1, x2, y2, x3, y3 int16, color uint32) int {
+	return int(
+		C.filledTrigonColor((*C.SDL_Surface)(cast(dst)),
+			C.Sint16(x1),
+			C.Sint16(y1),
+			C.Sint16(x2),
+			C.Sint16(y2),
+			C.Sint16(x3),
+			C.Sint16(y3),
+			C.Uint32(color)))
+}
+
 //
 //int filledTrigonRGBA (SDL_Surface *dst, Sint16 x1, Sint16 y1, Sint16 x2, Sint16 y2, Sint16 x3, Sint16 y3, Uint8 r, Uint8 g, Uint8 b, Uint8 a)
 // Draw filled trigon (triangle) with alpha blending.
