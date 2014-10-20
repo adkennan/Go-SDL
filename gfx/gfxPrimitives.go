@@ -283,6 +283,22 @@ func FilledTrigonColor(dst *sdl.Surface, x1, y1, x2, y2, x3, y3 int16, color uin
 //
 //int filledTrigonRGBA (SDL_Surface *dst, Sint16 x1, Sint16 y1, Sint16 x2, Sint16 y2, Sint16 x3, Sint16 y3, Uint8 r, Uint8 g, Uint8 b, Uint8 a)
 // Draw filled trigon (triangle) with alpha blending.
+
+func FilledTrigonRGBA(dst *sdl.Surface, x1, y1, x2, y2, x3, y3 int16, r, g, b, a uint8) int {
+	return int(
+		C.filledTrigonRGBA((*C.SDL_Surface)(cast(dst)),
+			C.Sint16(x1),
+			C.Sint16(y1),
+			C.Sint16(x2),
+			C.Sint16(y2),
+			C.Sint16(x3),
+			C.Sint16(y3),
+			C.Uint8(r),
+			C.Uint8(g),
+			C.Uint8(b),
+			C.Uint8(a)))
+}
+
 //
 //int polygonColor (SDL_Surface *dst, const Sint16 *vx, const Sint16 *vy, int n, Uint32 color)
 // Draw polygon with alpha blending.
